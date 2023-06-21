@@ -13,6 +13,7 @@ export const cartReducer = createReducer(
             const item = action.payload;
             const isItemExist = state.cartItems.find((i) => i.id === item.id);
 
+
             if (isItemExist) {
                 state.cartItems.forEach((i) => {
                     if (i.id === item.id) i.quantity += 1;
